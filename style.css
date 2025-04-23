@@ -1,0 +1,102 @@
+:root {
+  --color: #550000;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0, 0, 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 2000px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bg12.jpg);
+  z-index: -1;
+  /* filter: grayscale(); */
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  color: #e5e2cf;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Playwrite DE Grund", cursive;
+  font-size: 6rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: var(--color);
+  background-color: #e5e2cf;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background: linear-gradient(
+    135deg,
+    #7ee7ff,
+    #bb4dff
+  ); /* Gradasi biru dan ungu */
+  color: #e5e2cf;
+  box-shadow: 0 0 10px #7ee7ff, 0 0 20px #bb4dff; /* Efek glow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media Query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* .simply-countdown-cyber > .simply-section {
+    padding: 70px;
+  } */
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    padding: 60px;
+    margin: 5px;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 45%;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    padding: 45px;
+    margin: 3px;
+  }
+}

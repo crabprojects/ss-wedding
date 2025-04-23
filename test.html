@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syahar & Sjahrani Wedding</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Countdown Plugin -->
+    <link rel="stylesheet" href="countdown/cyber.min.css" />
+    <script src="countdown/simplyCountdown.umd.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body class="no scroll">
+    <section class="splash-screen-content splash-screen">
+      <div class="popup-card">
+        <!-- Gambar background masuk ke dalam card -->
+        <div class="card-bg">
+          <img src="img/bg12.jpg" alt="Background" />
+        </div>
+
+        <!-- Konten tetap -->
+        <main>
+          <div class="judul-text">
+            <h2>The Wedding Celebration Of</h2>
+            <h1>Syahar & Sjahrani</h1>
+            <p>10 Juni 2025</p>
+          </div>
+
+          <div class="isi-text">
+            <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+            <h1 class="mb-4">Keluarga Besar RS Provita Jayapura</h1>
+            <p>You Are Invited !</p>
+            <!-- <div class="simply-countdown-cyber cyber mt-4"></div> -->
+            <a href="#undangan" class="btn btn-lg mt-4 splash-button"
+              >Open Invitation</a
+            >
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <!-- <section id="hero" class="hero splash-screen">
+      <main>
+        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h1 class="mb-4">Syahar & Sjahrani</h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam</p>
+        <div class="simply-countdown-cyber cyber mt-4"></div>
+        <a href="#undangan" class="btn btn-lg mt-4 splash-button"
+          >Lihat Undangan</a
+        >
+      </main>
+    </section> -->
+
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">SS Invitation</a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SS</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#event">Event</a>
+              <a class="nav-link" href="#gift">Gift</a>
+              <a class="nav-link" href="#rsvp">Rsvp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero">
+      <main>
+        <div class="hero-text">
+          <h2>The Wedding Of</h2>
+          <h1>Syahar & Sjahrani</h1>
+          <h3>Selasa, 10 Juni 2025</h3>
+        </div>
+
+        <div class="hero-countdown">
+          <div class="simply-countdown-cyber cyber mt-4"></div>
+        </div>
+      </main>
+    </section>
+
+    <!-- <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>The Wedding Of</h2>
+            <h1>Syahar & Sjahrani</h1>
+            <h3>Selasa, 10 Juni 2025</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-8">
+            <div class="simply-countdown-cyber"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document
+        .querySelector(".splash-button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const splash = document.querySelector(".splash-screen");
+          const popup = document.querySelector(".popup-card");
+
+          // Tambahkan animasi ke card
+          popup.classList.add("boom-out");
+
+          // Setelah sedikit delay, sembunyikan overlay
+          setTimeout(() => {
+            splash.classList.add("hide");
+
+            // Scroll ke section undangan setelah animasi selesai
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          }, 5000); // waktu sesuai durasi animasi boomOut
+        });
+    </script>
+
+    <script>
+      document.body.classList.add("no-scroll");
+
+      const splashBtn = document.querySelector(".splash-button");
+      const splashScreen = document.querySelector(".splash-screen");
+
+      splashBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        splashScreen.classList.add("fade-out");
+
+        setTimeout(() => {
+          splashScreen.style.display = "none";
+          document.body.classList.remove("no-scroll");
+        }, 1000); // selesai animasi fade out
+      });
+    </script>
+
+    <!-- Countdown Setup -->
+    <script>
+      simplyCountdown(".simply-countdown-cyber", {
+        year: 2025,
+        month: 6,
+        day: 10,
+        hours: 9,
+        words: {
+          days: { root: "day", lambda: (r, n) => (n > 1 ? r + "s" : r) },
+          hours: { root: "hour", lambda: (r, n) => (n > 1 ? r + "s" : r) },
+          minutes: { root: "minute", lambda: (r, n) => (n > 1 ? r + "s" : r) },
+          seconds: { root: "second", lambda: (r, n) => (n > 1 ? r + "s" : r) },
+        },
+      });
+    </script>
+  </body>
+</html>

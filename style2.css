@@ -1,0 +1,837 @@
+:root {
+  --color: #444444;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  --textwhite: #fffafa;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--textwhite);
+  overflow-x: hidden;
+  min-height: 4000px;
+}
+
+/* Mencegah scroll saat splash muncul */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Splash overlay di luar */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+/* Card popup di tengah */
+.popup-card {
+  position: relative;
+  width: 100%;
+  /* max-width: 590vw; */
+  min-height: 740px; /* atau atur sesuai kebutuhan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ini penting untuk vertikal tengah */
+  align-items: center;
+  /* border-radius: 25px; */
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.popup-card main {
+  font-family: "Playwrite DE Grund", cursive;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 3rem 2rem;
+  color: #e5e2cf;
+  text-align: center;
+
+  /* pastikan ini */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Gambar background di dalam card */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* filter: brightness(0.8); */
+}
+
+.popup-card h1 {
+  font-size: 2rem;
+  text-shadow: var(--shadow);
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.popup-card h4,
+.popup-card p {
+  text-shadow: var(--shadow);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.popup-card p {
+  font-size: 1.7rem;
+}
+
+.popup-card a {
+  color: var(--color);
+  background-color: #e5e2cf;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-card a:hover {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a5a, #5c5c70);
+  color: #e5e2cf;
+  box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
+}
+
+.popup-card {
+  animation: slideDownFade 2s ease-out;
+}
+
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-550px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes boomOut {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(15deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.7) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Saat tombol diklik, tambahkan kelas ini ke popup-card */
+.popup-card.boom-out {
+  animation: boomOut 1s ease forwards;
+}
+
+@keyframes overlayFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.splash-screen.hide {
+  animation: overlayFadeOut 0.8s ease 0.4s forwards;
+}
+
+.judul-text {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.judul-text h2 {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.judul-text h1 {
+  font-size: 2rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.judul-text p {
+  font-size: 1.3rem !important;
+  white-space: nowrap;
+  margin-top: 2rem;
+}
+
+.isi-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.4) !important ;
+  /* backdrop-filter: blur(4px); */
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Playwrite DE Grund", cursive;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.hero {
+  font-family: "Playwrite DE Grund", cursive;
+  color: var(--textwhite);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 2rem; */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/avatar4.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  text-shadow: var(--shadow);
+  margin: 1rem 0;
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+
+.hero h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.hero h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero a {
+  color: var(--color);
+  background-color: #e5e2cf;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+/* .hero a:hover {
+  background: linear-gradient(135deg, #7ee7ff, #bb4dff);
+  color: #e5e2cf;
+  box-shadow: 0 0 10px #7ee7ff, 0 0 20px #bb4dff;
+} */
+.hero a:hover {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a5a, #5c5c70);
+  color: #e5e2cf;
+  box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
+}
+
+.home {
+  position: relative;
+  background-image: url("img/avatar4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin-top: -7rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  color: var(--color);
+  font-family: "Playwrite DE Grund", cursive;
+  overflow: hidden; /* penting untuk pseudo-element */
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  z-index: 0; /* di bawah konten */
+}
+
+.home > * {
+  position: relative;
+  z-index: 1; /* konten tetap di atas overlay */
+}
+
+.home h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h1 {
+  font-size: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.home h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* === RESPONSIVE === */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/avatar4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .popup-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero h4 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    padding: 60px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 3.7rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.6rem !important; /* diperbesar */
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/avatar4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .popup-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+    margin-top: 20px;
+  }
+
+  .hero h4 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    padding: 60px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 5.2rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.6rem !important; /* diperbesar */
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 58%;
+  }
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .popup-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  /* .hero p {
+    font-size: 1.4rem;
+  } */
+
+  .simply-countdown-cyber {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    gap: 0.75rem;
+    max-width: 100vw;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    flex: 0 0 auto;
+    width: 80px !important;
+    height: 80px !important;
+    padding: 2rem !important;
+    margin: 0 4px;
+    max-width: 100%;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 2.2rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 0.8rem !important; /* diperbesar */
+  }
+}
+
+/* Extra small devices (contoh: iPhone SE) */
+@media (min-width: 400px) and (max-width: 430px) {
+  html {
+    font-size: 55%;
+  }
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .popup-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    /* margin-top: 23rem; */
+    font-weight: bold;
+  }
+
+  .hero h2 {
+    font-size: 5rem;
+    /* margin-top: 10rem; */
+    font-weight: bold;
+  }
+
+  .hero h3 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .popup-card a {
+    font-size: 2rem;
+    margin-top: 30px !important;
+  }
+
+  .simply-countdown-cyber {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    max-width: 100vw;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    flex: 0 0 auto;
+    width: 75px !important;
+    height: 75px !important;
+    padding: 1.2rem !important;
+    margin: 0 4px;
+    max-width: 100%;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 3rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.2rem !important; /* diperbesar */
+  }
+  /* .popup-card {
+    min-height: 480px;
+  } */
+}
+
+@media (max-width: 390px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* .popup-card {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 1.5rem;
+  } */
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h4 {
+    font-size: 1.7rem;
+  }
+
+  .popup-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-top: 25px;
+    font-weight: bold;
+  }
+
+  .hero h2 {
+    font-size: 4.4rem;
+  }
+
+  .hero h3 {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .popup-card a {
+    font-size: 2rem;
+    margin-top: 30px !important;
+  }
+
+  .simply-countdown-cyber {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    max-width: 100vw;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    flex: 0 0 auto;
+    width: 75px !important;
+    height: 75px !important;
+    padding: 1.2rem !important;
+    margin: 0 4px;
+    max-width: 100%;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 3rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.2rem !important; /* diperbesar */
+  }
+  .popup-card {
+    min-height: 695px !important;
+  }
+}
+
+@media (max-width: 344px) {
+  .hero {
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero h4,
+  .hero p {
+    margin: 0.5rem auto;
+    max-width: 100%;
+  }
+
+  .simply-countdown-cyber {
+    display: flex;
+    flex-wrap: nowrap; /* Tidak wrap */
+    overflow-x: auto; /* Scroll horizontal jika sempit */
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    flex: 0 0 auto;
+    width: 75px !important;
+    height: 75px !important;
+    padding: 1rem !important;
+    margin: 0 2px;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 2.8rem !important;
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.3rem !important;
+  }
+
+  .hero a {
+    margin: 1.5rem auto 0;
+    font-size: 1.3rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
