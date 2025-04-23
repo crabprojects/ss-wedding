@@ -10,10 +10,10 @@ body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--textwhite);
-  overflow-x: hidden;
-  min-height: 4000px;
+  overflow: hidden;
+  /* min-height: 4000px; */
 }
 
 /* Mencegah scroll saat splash muncul */
@@ -1097,23 +1097,50 @@ body {
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* .hero-text {
+    margin-top: -8rem;
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+  }
+
+  .hero-countdown {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
 
   .hero-text {
     font-size: 1.5rem !important;
     white-space: nowrap;
-    margin-top: -22rem;
+    margin-top: -4rem;
   }
 
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: 6rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 2;
+  }
+
+  .hero {
+    min-height: 100dvh;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .countdown-glass {
