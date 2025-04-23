@@ -40,7 +40,7 @@ body {
   position: relative;
   width: 100%;
   /* max-width: 590vw; */
-  min-height: 740px; /* atau atur sesuai kebutuhan */
+  min-height: 750px; /* atau atur sesuai kebutuhan */
   display: flex;
   flex-direction: column;
   justify-content: center; /* ini penting untuk vertikal tengah */
@@ -383,8 +383,12 @@ body {
     z-index: 2;
   }
 
+  .popup-card {
+    min-height: 51.67rem !important;
+  }
+
   .popup-card h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 2.667rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     font-weight: bold;
@@ -392,12 +396,108 @@ body {
     /* overflow-x: hidden; */
   }
 
+  .popup-card h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .popup-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
   .popup-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.333rem;
+  }
+
+  /* .popup-card h3 {
+    font-size: 1.5rem !important;
+  } */
+
+  .popup-card p {
+    font-size: 1.333rem !important;
+    font-weight: bold;
+  }
+
+  .hero h4 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .simply-countdown-cyber > .simply-section {
+    padding: 60px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .simply-countdown-cyber .simply-amount {
+    font-size: 3.7rem !important; /* diperbesar */
+  }
+
+  .simply-countdown-cyber .simply-word {
+    font-size: 1.6rem !important; /* diperbesar */
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/avatar4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  .judul-text p {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+    margin-top: 4rem;
+  }
+
+  .isi-text {
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .popup-card h1 {
+    font-size: 2.667rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
+  }
+
+  .popup-card h3 {
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .popup-card h4 {
+    font-size: 1.5rem;
   }
 
   .popup-card p {
-    font-size: 2rem;
+    font-size: 1.5rem !important;
     font-weight: bold;
   }
 
@@ -462,7 +562,7 @@ body {
   }
 
   .popup-card h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3.64rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     font-weight: bold;
@@ -470,13 +570,31 @@ body {
     /* overflow-x: hidden; */
   }
 
+  .popup-card h2 {
+    font-size: 1.82rem !important;
+  }
+
   .popup-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.59rem;
+  }
+
+  .popup-card h3 {
+    font-size: 1.82rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
   }
 
   .popup-card p {
-    font-size: 2rem;
+    font-size: 1.59rem;
     font-weight: bold;
+  }
+
+  .popup-card a {
+    font-size: 1.82rem;
+    margin-top: 30px !important;
   }
 
   .hero h1 {
@@ -537,7 +655,7 @@ body {
   }
 
   .popup-card h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3.64rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     font-weight: bold;
@@ -545,13 +663,31 @@ body {
     /* overflow-x: hidden; */
   }
 
+  .popup-card h2 {
+    font-size: 1.82rem !important;
+  }
+
   .popup-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.59rem;
+  }
+
+  .popup-card h3 {
+    font-size: 1.82rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
   }
 
   .popup-card p {
-    font-size: 2rem;
+    font-size: 1.59rem;
     font-weight: bold;
+  }
+
+  .popup-card a {
+    font-size: 1.82rem;
+    margin-top: 30px !important;
   }
 
   .hero {
@@ -621,8 +757,12 @@ body {
     z-index: 2;
   }
 
+  .popup-card {
+    min-height: 56.82rem !important;
+  }
+
   .popup-card h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3.64rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     font-weight: bold;
@@ -630,12 +770,25 @@ body {
     /* overflow-x: hidden; */
   }
 
+  .popup-card h2 {
+    font-size: 1.82rem !important;
+  }
+
   .popup-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.59rem;
+  }
+
+  .popup-card h3 {
+    font-size: 1.82rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
   }
 
   .popup-card p {
-    font-size: 2rem;
+    font-size: 1.59rem;
     font-weight: bold;
   }
 
@@ -658,11 +811,11 @@ body {
   }
 
   .popup-card a {
-    font-size: 2rem;
+    font-size: 1.82rem;
     margin-top: 30px !important;
   }
 
-  .simply-countdown-cyber {
+  /* .simply-countdown-cyber {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
@@ -677,7 +830,7 @@ body {
     padding: 1.2rem !important;
     margin: 0 4px;
     max-width: 100%;
-  }
+  } */
 
   .simply-countdown-cyber .simply-amount {
     font-size: 3rem !important; /* diperbesar */
@@ -718,7 +871,7 @@ body {
   }
 
   .popup-card h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3.64rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     font-weight: bold;
@@ -726,13 +879,31 @@ body {
     /* overflow-x: hidden; */
   }
 
+  .popup-card h2 {
+    font-size: 1.82rem !important;
+  }
+
   .popup-card h4 {
-    font-size: 1.7rem;
+    font-size: 1.59rem;
+  }
+
+  .popup-card h3 {
+    font-size: 1.82rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    /* overflow-x: hidden; */
   }
 
   .popup-card p {
-    font-size: 2rem;
+    font-size: 1.59rem;
     font-weight: bold;
+  }
+
+  .popup-card a {
+    font-size: 1.82rem;
+    margin-top: 30px !important;
   }
 
   .hero h1 {
@@ -751,12 +922,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .popup-card a {
-    font-size: 2rem;
-    margin-top: 30px !important;
-  }
-
-  .simply-countdown-cyber {
+  /* .simply-countdown-cyber {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
@@ -771,7 +937,7 @@ body {
     padding: 1.2rem !important;
     margin: 0 4px;
     max-width: 100%;
-  }
+  } */
 
   .simply-countdown-cyber .simply-amount {
     font-size: 3rem !important; /* diperbesar */
@@ -781,7 +947,7 @@ body {
     font-size: 1.2rem !important; /* diperbesar */
   }
   .popup-card {
-    min-height: 695px !important;
+    min-height: 56.82rem !important;
   }
 }
 
