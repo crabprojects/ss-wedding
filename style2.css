@@ -431,12 +431,16 @@ body {
     margin-top: -25rem;
   }
 
+  .hero::before {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 47.1% !important;
+  }
+
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: -6rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -451,6 +455,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
+    padding-bottom: 4rem;
+    /* width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass::before {
@@ -588,12 +596,16 @@ body {
     margin-top: -22rem;
   }
 
+  .hero::before {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 47.1% !important;
+  }
+
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: 6rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -608,6 +620,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
+    padding-bottom: 4rem;
+    /* width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass::before {
@@ -758,12 +774,16 @@ body {
     margin-top: -22rem;
   }
 
+  .hero::before {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 47.1% !important;
+  }
+
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: 6rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -778,6 +798,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
+    padding-bottom: 4rem;
+    /* width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass::before {
@@ -926,12 +950,16 @@ body {
     margin-top: -22rem;
   }
 
+  .hero::before {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 47.1% !important;
+  }
+
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: 6rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -946,6 +974,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
+    padding-bottom: 4rem;
+    /* width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass::before {
@@ -1129,10 +1161,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
-    padding-bottom: 8rem;
-    width: fit-content;
+    padding-bottom: 4rem;
+    /* width: fit-content;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass::before {
@@ -1433,16 +1465,34 @@ body {
     margin-top: -22rem;
   }
 
+  .hero::before {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 47.1% !important;
+  }
+
   .hero-countdown {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     position: absolute;
-    bottom: 6rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 2;
+  }
+
+  .countdown-glass {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* pastikan konten tetap di atas */
+    overflow: hidden; /* pastikan ::before tetap di dalam kotak */
+    padding-bottom: 4rem;
+    /* width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass {
