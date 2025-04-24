@@ -1316,10 +1316,10 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
-    padding-bottom: 8rem;
-    width: fit-content;
+    padding-bottom: 4rem;
+    /* width: fit-content;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
   }
 
   .countdown-glass {
