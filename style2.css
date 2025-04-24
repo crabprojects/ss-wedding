@@ -10,7 +10,7 @@ body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
-  /* min-height: 100vh; */
+  /* min-height: 20vh !important; */
   background-color: var(--textwhite);
   overflow-x: hidden;
   /* min-height: 4000px; */
@@ -275,7 +275,7 @@ body {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-
+/* 
 .hero a {
   color: var(--color);
   background-color: #e5e2cf;
@@ -285,27 +285,16 @@ body {
   border-radius: 5px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease-in-out;
-}
-
-/* .hero a:hover {
-  background: linear-gradient(135deg, #7ee7ff, #bb4dff);
-  color: #e5e2cf;
-  box-shadow: 0 0 10px #7ee7ff, 0 0 20px #bb4dff;
 } */
-.hero a:hover {
-  background: linear-gradient(135deg, #2a2a2a, #4a4a5a, #5c5c70);
-  color: #e5e2cf;
-  box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
-}
 
 .home {
   position: relative;
-  background-image: url("img/avatar4.jpg");
+  background-image: url("img/home4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  margin-top: -7rem;
+  margin-top: -6rem;
   padding-top: 15rem;
   padding-bottom: 5rem;
   color: var(--color);
@@ -1104,19 +1093,6 @@ body {
     overflow: hidden;
   }
 
-  /* .hero-text {
-    margin-top: -8rem;
-    font-size: 1.5rem !important;
-    white-space: nowrap;
-  }
-
-  .hero-countdown {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-  } */
-
   .hero-text {
     font-size: 1.5rem !important;
     white-space: nowrap;
@@ -1126,7 +1102,7 @@ body {
   .hero-countdown {
     width: 100%;
     position: absolute;
-    bottom: 3rem;
+    bottom: 6rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
