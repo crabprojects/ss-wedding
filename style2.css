@@ -1128,7 +1128,7 @@ body {
     align-items: center;
     z-index: 1; /* pastikan konten tetap di atas */
     overflow: hidden; /* pastikan ::before tetap di dalam kotak */
-    padding-bottom: 4rem;
+    padding-bottom: 10rem;
   }
 
   .countdown-glass::before {
