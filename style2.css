@@ -1114,7 +1114,7 @@ body {
   .hero-countdown {
     width: 100%;
     position: absolute;
-    bottom: -2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -1301,7 +1301,7 @@ body {
   .hero-countdown {
     width: 100%;
     position: absolute;
-    bottom: -2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
