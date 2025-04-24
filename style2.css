@@ -289,7 +289,7 @@ body {
 
 .home {
   position: relative;
-  background-image: url("img/home4.png");
+  background-image: url("img/home1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1078,7 +1078,7 @@ body {
 
   .hero h2 {
     font-size: 2.27rem;
-    /* margin-top: 10rem; */
+    margin-top: 10rem;
     font-weight: bold;
   }
 
@@ -1089,7 +1089,7 @@ body {
   }
   .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh !important;
     overflow: hidden;
   }
 
@@ -1102,7 +1102,7 @@ body {
   .hero-countdown {
     width: 100%;
     position: absolute;
-    bottom: 6rem;
+    bottom: -2rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
