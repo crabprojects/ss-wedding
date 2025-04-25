@@ -471,6 +471,120 @@ body {
   }
 } */
 
+.wedding-event {
+  background-color: var(--color);
+  color: var(--textwhite);
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+/* styling */
+.event-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 300px;
+  flex-wrap: wrap;
+  background-color: transparent;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
+  border: 2px dashed rgba(255, 255, 255, 0.2); /* garis tipis elegan */
+}
+
+.event-card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://cdn.jsdelivr.net/gh/feathericons/feather/icons/feather.svg#feather"); /* contoh ringan */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  transform: rotate(-15deg);
+}
+
+.event-card-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://cdn.jsdelivr.net/gh/feathericons/feather/icons/feather.svg#feather");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  transform: rotate(15deg);
+}
+
+/* Akhir styling */
+
+.wedding-event h2 {
+  color: var(--textwhite);
+  font-size: 3rem;
+  /* margin-top: 4rem; */
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.gmaps-btn {
+  background: linear-gradient(135deg, #4285f4, #34a853); /* biru ke hijau */
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.gmaps-btn:hover {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a5a, #5c5c70);
+  color: #e5e2cf;
+  box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
+}
+
+/* .font-event {
+  font-family: "Mr De Haviland", cursive;
+} */
+
+.font-wrap {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem; /* beri ruang agar Event gak nempel ke bawah */
+}
+
+.font-judul {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Playwrite DE Grund", cursive;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.font-subjudul {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 2rem;
+  color: #e5e5e5;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0.2rem);
+  opacity: 0.85;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 /* === RESPONSIVE === */
 
 /* Laptop */
