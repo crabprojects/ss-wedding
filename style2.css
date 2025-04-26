@@ -479,59 +479,73 @@ body {
   font-family: "Playwrite DE Grund", cursive;
 }
 
-/* styling */
-.event-card-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  border-radius: 25px;
-  padding: 3rem 2rem;
-  margin: 0 auto;
-  max-width: 300px;
-  flex-wrap: wrap;
-  background-color: transparent;
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
-  border: 2px dashed rgba(255, 255, 255, 0.2); /* garis tipis elegan */
-}
-
-.event-card-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -25px;
-  width: 50px;
-  height: 50px;
-  background-image: url("https://cdn.jsdelivr.net/gh/feathericons/feather/icons/feather.svg#feather"); /* contoh ringan */
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.2;
-  transform: rotate(-15deg);
-}
-
-.event-card-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  right: -25px;
-  width: 50px;
-  height: 50px;
-  background-image: url("https://cdn.jsdelivr.net/gh/feathericons/feather/icons/feather.svg#feather");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.2;
-  transform: rotate(15deg);
-}
-
-/* Akhir styling */
-
 .wedding-event h2 {
   color: var(--textwhite);
   font-size: 3rem;
   /* margin-top: 4rem; */
   margin-bottom: 3rem;
   font-weight: bold;
+}
+
+.wedding-event p {
+  font-weight: bold;
+  font-size: 1.333rem;
+}
+
+/* styling */
+.event-card-wrapper {
+  background: url("img/border1-removebg-preview.png") center/contain no-repeat;
+  background-size: 100% 100%;
+  padding: 10rem 2rem;
+  max-width: 100% !important;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; /* jarak antar Akad dan Resepsi */
+  border: none; /* pastikan tidak ada border tambahan */
+}
+
+.separator {
+  width: 85%; /* Turunkan dari 90% ke 85% */
+  max-width: 100%; /* Kecilkan max-width */
+  background-color: rgba(193, 178, 163, 0.1);
+  padding: 0.6rem 2rem;
+  margin: auto;
+  margin-top: 2.8rem; /* lebih dekat ke atas */
+  margin-bottom: 1.8rem; /* sedikit lebih dekat ke bawah */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mr De Haviland", cursive;
+  font-size: 3rem;
+  color: var(--textwhite);
+}
+/* Akhir styling */
+
+/* Bulatan angka */
+/* .event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+} */
+
+.event-date .date-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #c1b2a3; /* warna krem */
+  color: white;
+  /* font-size: 2rem; */
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 0.5rem 0; /* jarak atas bawah supaya ada ruang */
 }
 
 .gmaps-btn {
@@ -574,7 +588,7 @@ body {
 
 .font-subjudul {
   font-family: "Mr De Haviland", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #e5e5e5;
   position: absolute;
   top: 100%;
