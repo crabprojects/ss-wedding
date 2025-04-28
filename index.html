@@ -263,6 +263,30 @@
             </p>
           </div>
         </div>
+        <div class="row justify-content-center atm-card">
+          <div class="col-md-8 col-10">
+            <div class="bank-logo">
+              <img src="img/brilogo1-removebg-preview.png" alt="Bank Logo" />
+            </div>
+
+            <p class="copy-btn-wrapper">
+              <a
+                href="#wedding-gift"
+                onclick="copyToClipboard('214101035155507')"
+                ><i class="bi bi-copy"></i> Copy</a
+              >
+            </p>
+            <p class="atm-date" style="text-align: left; margin-left: 15px">
+              10/06/2025
+            </p>
+            <p class="norek" style="text-align: left; margin-left: 15px">
+              2141 0103 5155 507
+            </p>
+            <p class="nama-rek" style="text-align: left; margin-left: 15px">
+              Amin Syahar Hasanuddin
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -272,6 +296,139 @@
           <div class="col-md-8 col-10 text-center wishes">
             <h2>Wishes</h2>
             <p>Beri ucapan dan doa</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <!-- Tambahan HTML form -->
+            <div class="wishes-card">
+              <div class="wishes-card-overlay">
+                <hr />
+                <p>10 Comments</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card">
+                      <div class="card-body hadir">
+                        <span>14</span>
+                        <p>Hadir</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card">
+                      <div class="card-body tidak-hadir">
+                        <span>2</span>
+                        <p>Tidak Hadir</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <form class="wishes-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Masukkan nama Anda"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="3"
+                      placeholder="Tulis ucapan atau doa"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <select id="attendance" name="attendance" required>
+                      <option value="">Pilih</option>
+                      <option value="Hadir">Hadir</option>
+                      <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+
+                <div class="comments-section">
+                  <div class="comments-list">
+                    <!-- contoh komentar dummy -->
+                    <div class="comment-item">
+                      <strong>Nama Tamu</strong>
+                      <p>Selamat menempuh hidup baru!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 2</strong>
+                      <p>Semoga bahagia selalu!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 3</strong>
+                      <p>Barakallah!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 4</strong>
+                      <p>Langgeng yaa!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 5</strong>
+                      <p>Congrats!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu</strong>
+                      <p>Selamat menempuh hidup baru!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 2</strong>
+                      <p>Semoga bahagia selalu!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 3</strong>
+                      <p>Barakallah!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 4</strong>
+                      <p>Langgeng yaa!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 5</strong>
+                      <p>Congrats!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu</strong>
+                      <p>Selamat menempuh hidup baru!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 2</strong>
+                      <p>Semoga bahagia selalu!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 3</strong>
+                      <p>Barakallah!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 4</strong>
+                      <p>Langgeng yaa!</p>
+                    </div>
+                    <div class="comment-item">
+                      <strong>Nama Tamu 5</strong>
+                      <p>Congrats!</p>
+                    </div>
+                  </div>
+
+                  <!-- pagination -->
+                  <div class="pagination">
+                    <button id="prev-btn" class="pagination-btn">
+                      Previous
+                    </button>
+                    <button id="next-btn" class="pagination-btn">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -337,6 +494,90 @@
           minutes: { root: "minute", lambda: (r, n) => (n > 1 ? r + "s" : r) },
           seconds: { root: "second", lambda: (r, n) => (n > 1 ? r + "s" : r) },
         },
+      });
+    </script>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert("Nomor rekening berhasil dicopy");
+          })
+          .catch((err) => {
+            alert("Gagal copy");
+          });
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const comments = document.querySelectorAll(".comment-item");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const commentsPerPage = 10;
+        let currentPage = 1;
+        const totalPages = Math.ceil(comments.length / commentsPerPage);
+
+        function animateOut(element, callback) {
+          element.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+          element.style.opacity = 0;
+          element.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            element.style.display = "none";
+            if (callback) callback();
+          }, 400); // waktu harus sama dengan transition di atas
+        }
+
+        function animateIn(element) {
+          element.style.display = "block";
+          element.style.opacity = 0;
+          element.style.transform = "scale(1.05)";
+          element.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+          requestAnimationFrame(() => {
+            element.style.opacity = 1;
+            element.style.transform = "scale(1)";
+          });
+        }
+
+        function showPage(page) {
+          const start = (page - 1) * commentsPerPage;
+          const end = start + commentsPerPage;
+
+          comments.forEach((comment, index) => {
+            if (index >= start && index < end) {
+              animateIn(comment);
+            } else {
+              animateOut(comment);
+            }
+          });
+
+          prevBtn.disabled = page === 1;
+          nextBtn.disabled = page === totalPages;
+        }
+
+        prevBtn.addEventListener("click", function () {
+          if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+          }
+        });
+
+        nextBtn.addEventListener("click", function () {
+          if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+          }
+        });
+
+        // Awal sembunyikan semua dulu
+        comments.forEach((comment) => {
+          comment.style.opacity = 0;
+          comment.style.transform = "scale(0.95)";
+          comment.style.display = "none";
+        });
+
+        showPage(currentPage);
       });
     </script>
   </body>
