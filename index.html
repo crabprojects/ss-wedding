@@ -552,39 +552,6 @@
           const res = await fetch(
             "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec"
           );
-          const text = await res.text();
-          const data = JSON.parse(text); // pastikan script kamu return data komentar juga
-
-          // Asumsikan kamu akan ambil array komentar dari Apps Script
-          commentsList.innerHTML = data
-            .reverse()
-            .map(
-              (row) => `
-            <div class="comment-item">
-              <strong>${row.nama}</strong>
-              <p>${row.pesan}</p>
-            </div>
-          `
-            )
-            .join("");
-        } catch (e) {
-          console.error("Gagal load komentar", e);
-        }
-      }
-
-      // load saat pertama
-      loadComments();
-    </script>
-
-    <!-- Script comment -->
-
-    <!-- Load comment -->
-    <script>
-      async function loadComments() {
-        try {
-          const res = await fetch(
-            "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec"
-          );
           const data = await res.json();
 
           // Update jumlah hadir dan tidak hadir
@@ -617,6 +584,10 @@
       // Panggil saat halaman selesai dimuat
       window.addEventListener("DOMContentLoaded", loadComments);
     </script>
+
+    <!-- Script comment -->
+
+    <!-- Load comment -->
 
     <!-- Load comment -->
 
