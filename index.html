@@ -357,7 +357,7 @@
                 <div class="comments-section">
                   <div class="comments-list">
                     <!-- contoh komentar dummy -->
-                    <div class="comment-item"></div>
+                    <!-- <div class="comment-item"></div> -->
                     <!-- <div class="comment-item">
                       <strong>Nama Tamu</strong>
                       <p>Selamat menempuh hidup baru!</p>
@@ -547,13 +547,47 @@
         }
       });
 
+      // function handleData(data) {
+      //   document.querySelector(".hadir span").textContent = data.hadir;
+      //   document.querySelector(".tidak-hadir span").textContent =
+      //     data.tidakHadir;
+      //   document.querySelector(
+      //     ".wishes-card-overlay > p"
+      //   ).textContent = `${data.comments.length} Comments`;
+
+      //   const commentsList = document.querySelector(".comments-list");
+      //   commentsList.innerHTML = "";
+
+      //   data.comments.reverse().forEach((row) => {
+      //     const div = document.createElement("div");
+      //     div.classList.add("comment-item");
+      //     div.innerHTML = `
+      //       <strong>${row.nama}</strong>
+      //       <p>${row.pesan}</p>
+      //     `;
+      //     commentsList.appendChild(div);
+      //   });
+      // }
+
+      // function loadComments() {
+      //   const oldScript = document.getElementById("jsonpScript");
+      //   if (oldScript) oldScript.remove();
+
+      //   const script = document.createElement("script");
+      //   script.id = "jsonpScript";
+      //   script.src =
+      //     "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec?callback=handleData";
+      //   document.body.appendChild(script);
+      // }
+
+      // window.addEventListener("DOMContentLoaded", loadComments);
+    </script>
+
+    <script>
       function handleData(data) {
         document.querySelector(".hadir span").textContent = data.hadir;
         document.querySelector(".tidak-hadir span").textContent =
           data.tidakHadir;
-        document.querySelector(
-          ".wishes-card-overlay > p"
-        ).textContent = `${data.comments.length} Comments`;
 
         const commentsList = document.querySelector(".comments-list");
         commentsList.innerHTML = "";
@@ -562,25 +596,21 @@
           const div = document.createElement("div");
           div.classList.add("comment-item");
           div.innerHTML = `
-            <strong>${row.nama}</strong>
-            <p>${row.pesan}</p>
-          `;
+        <strong>${row.nama}</strong>
+        <p>${row.pesan}</p>
+      `;
           commentsList.appendChild(div);
         });
       }
 
       function loadComments() {
-        const oldScript = document.getElementById("jsonpScript");
-        if (oldScript) oldScript.remove();
-
         const script = document.createElement("script");
-        script.id = "jsonpScript";
         script.src =
           "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec?callback=handleData";
         document.body.appendChild(script);
       }
 
-      window.addEventListener("DOMContentLoaded", loadComments);
+      document.addEventListener("DOMContentLoaded", loadComments);
     </script>
 
     <!-- Script comment -->
