@@ -802,7 +802,7 @@ hr {
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #fff;
-  font-size: 1.333rem;
+  font-size: 1.667rem;
 }
 
 .wishes-form textarea {
@@ -855,12 +855,12 @@ hr {
 .comment-item strong {
   display: block;
   color: #333;
-  font-size: 1.333rem;
+  font-size: 1.667rem;
 }
 
 .comment-item p {
   margin: 5px 0 0 0;
-  font-size: 1.111rem;
+  font-size: 1.555rem;
   color: #666;
 }
 
@@ -878,7 +878,7 @@ hr {
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
-  font-size: 1.333rem;
+  font-size: 1.667rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
