@@ -611,38 +611,6 @@
       }
 
       document.addEventListener("DOMContentLoaded", loadComments);
-
-      function doGet(e) {
-        const sheet = SpreadsheetApp.openById(
-          scriptProp.getProperty("key")
-        ).getSheetByName(sheetName);
-        const values = sheet
-          .getRange(2, 1, sheet.getLastRow() - 1, 4)
-          .getValues();
-
-        let hadirCount = 0;
-        let tidakHadirCount = 0;
-        const comments = [];
-
-        values.forEach(([tanggal, nama, pesan, status]) => {
-          if (status === "Hadir") hadirCount++;
-          if (status === "Tidak Hadir") tidakHadirCount++;
-          comments.push({ nama, pesan, status });
-        });
-
-        const response = {
-          result: "success",
-          hadir: hadirCount,
-          tidakHadir: tidakHadirCount,
-          comments: comments,
-        };
-
-        const callback = e.parameter.callback || "handleData";
-
-        return ContentService.createTextOutput(
-          `${callback}(${JSON.stringify(response)});`
-        ).setMimeType(ContentService.MimeType.JAVASCRIPT);
-      }
     </script>
 
     <!-- Script comment -->
