@@ -888,6 +888,14 @@ hr {
   color: #e5e2cf;
 }
 
+footer {
+  padding: 3rem;
+  background-color: var(--bg);
+  color: var(--textwhite);
+  font-family: "Playwrite DE Grund", cursive;
+  font-weight: bold;
+}
+
 /* === RESPONSIVE === */
 
 /* Laptop */
