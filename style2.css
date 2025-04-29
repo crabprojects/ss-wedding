@@ -643,6 +643,13 @@ body {
   letter-spacing: 0.4rem;
   margin-top: -40px;
   margin-left: 10px;
+  -webkit-user-modify: read-only !important;
+  -webkit-touch-callout: none !important;
+  -webkit-text-decoration-skip: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  /* Tambahan fix */
+  user-select: text;
+  pointer-events: none; /* Nonaktifkan klik kalau dia auto-link */
 }
 .nama-rek {
   color: var(--textwhite);
