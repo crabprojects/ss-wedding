@@ -660,13 +660,14 @@ body {
 }
 
 .copy-btn-wrapper {
-  width: 100%;
+  /* width: 100%; */
   text-align: right;
   /* padding-right: 30px; */
   margin-top: 65px;
 }
 
 .atm-card a {
+  /* display: inline-block; */
   background: linear-gradient(135deg, #4285f4, #34a853); /* biru ke hijau */
   color: #fff;
   border: none;
