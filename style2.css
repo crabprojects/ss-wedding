@@ -666,9 +666,7 @@ body {
   margin-top: 65px;
 }
 
-.atm-card a {
-  display: inline-block;
-  width: 30% !important;
+.copy-btn-wrapper a {
   background: linear-gradient(135deg, #4285f4, #34a853); /* biru ke hijau */
   color: #fff;
   border: none;
@@ -685,7 +683,7 @@ body {
   margin-right: 21px;
 }
 
-.atm-card a:hover {
+.copy-btn-wrapper a:hover {
   background: linear-gradient(135deg, #2a2a2a, #4a4a5a, #5c5c70);
   color: #e5e2cf;
   box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
