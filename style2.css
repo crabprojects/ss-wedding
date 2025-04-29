@@ -609,7 +609,7 @@ body {
 
 .atm-card {
   background: url("img/atm-card-removebg-preview.png") center/contain no-repeat;
-  background-size: 150% 130%;
+  background-size: 160% 110%;
   padding: 10rem 2rem;
   max-width: 100% !important;
   margin: 0 auto;
@@ -623,7 +623,7 @@ body {
 
 .bank-logo {
   position: absolute;
-  top: 54px; /* jarak dari atas */
+  top: 70px; /* jarak dari atas */
   left: 40px; /* jarak dari kiri */
   width: 110px; /* ukuran logo */
   height: auto;
@@ -639,15 +639,15 @@ body {
   font-size: 1rem !important;
   font-weight: bold;
   letter-spacing: 0.2rem;
-  margin-top: -40px !important;
+  margin-top: -10px !important;
   margin-bottom: 15px;
   text-shadow: rgba(0, 0, 0, 0.85);
 }
 .norek {
   color: var(--textwhite);
-  font-size: 1.555rem;
+  font-size: 1.333rem;
   font-weight: bold;
-  letter-spacing: 0.65rem;
+  letter-spacing: 0.4rem;
   margin-top: -40px;
 }
 .nama-rek {
