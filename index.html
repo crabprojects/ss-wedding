@@ -277,7 +277,7 @@
               >
             </p>
             <p class="atm-date">10/06/2025</p>
-            <p class="norek">2141 0103 5155 507</p>
+            <p class="norek">2141-0103-5155-507</p>
             <p class="nama-rek">Amin Syahar Hasanuddin</p>
           </div>
         </div>
@@ -322,7 +322,7 @@
                 <form
                   id="wishesForm"
                   method="post"
-                  action="https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec"
+                  action="https://script.google.com/macros/s/AKfycbwhd1-Qf4nXeu0t54DGVVpOHeImPxFxwJCNQkkhxn1AruW3Z1Xyj-EtZey4kk1_hEsS/exec"
                   target="_blank"
                   class="wishes-form"
                 >
@@ -355,70 +355,7 @@
                 </form>
 
                 <div class="comments-section">
-                  <div class="comments-list">
-                    <!-- contoh komentar dummy -->
-                    <!-- <div class="comment-item"></div> -->
-                    <!-- <div class="comment-item">
-                      <strong>Nama Tamu</strong>
-                      <p>Selamat menempuh hidup baru!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 2</strong>
-                      <p>Semoga bahagia selalu!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 3</strong>
-                      <p>Barakallah!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 4</strong>
-                      <p>Langgeng yaa!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 5</strong>
-                      <p>Congrats!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu</strong>
-                      <p>Selamat menempuh hidup baru!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 2</strong>
-                      <p>Semoga bahagia selalu!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 3</strong>
-                      <p>Barakallah!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 4</strong>
-                      <p>Langgeng yaa!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 5</strong>
-                      <p>Congrats!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu</strong>
-                      <p>Selamat menempuh hidup baru!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 2</strong>
-                      <p>Semoga bahagia selalu!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 3</strong>
-                      <p>Barakallah!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 4</strong>
-                      <p>Langgeng yaa!</p>
-                    </div>
-                    <div class="comment-item">
-                      <strong>Nama Tamu 5</strong>
-                      <p>Congrats!</p>
-                    </div> -->
-                  </div>
+                  <div class="comments-list"></div>
 
                   <!-- pagination -->
                   <div class="pagination">
@@ -528,7 +465,7 @@
 
         try {
           const res = await fetch(
-            "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec",
+            "https://script.google.com/macros/s/AKfycbwhd1-Qf4nXeu0t54DGVVpOHeImPxFxwJCNQkkhxn1AruW3Z1Xyj-EtZey4kk1_hEsS/exec",
             {
               method: "POST",
               body: formData,
@@ -546,43 +483,11 @@
           alert("Error saat mengirim!");
         }
       });
-
-      // function handleData(data) {
-      //   document.querySelector(".hadir span").textContent = data.hadir;
-      //   document.querySelector(".tidak-hadir span").textContent =
-      //     data.tidakHadir;
-      //   document.querySelector(
-      //     ".wishes-card-overlay > p"
-      //   ).textContent = `${data.comments.length} Comments`;
-
-      //   const commentsList = document.querySelector(".comments-list");
-      //   commentsList.innerHTML = "";
-
-      //   data.comments.reverse().forEach((row) => {
-      //     const div = document.createElement("div");
-      //     div.classList.add("comment-item");
-      //     div.innerHTML = `
-      //       <strong>${row.nama}</strong>
-      //       <p>${row.pesan}</p>
-      //     `;
-      //     commentsList.appendChild(div);
-      //   });
-      // }
-
-      // function loadComments() {
-      //   const oldScript = document.getElementById("jsonpScript");
-      //   if (oldScript) oldScript.remove();
-
-      //   const script = document.createElement("script");
-      //   script.id = "jsonpScript";
-      //   script.src =
-      //     "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec?callback=handleData";
-      //   document.body.appendChild(script);
-      // }
-
-      // window.addEventListener("DOMContentLoaded", loadComments);
     </script>
 
+    <!-- Script comment -->
+
+    <!-- Load comment -->
     <script>
       function handleData(data) {
         document.querySelector(".hadir span").textContent = data.hadir;
@@ -596,36 +501,39 @@
           const div = document.createElement("div");
           div.classList.add("comment-item");
           div.innerHTML = `
-        <strong>${row.nama}</strong>
-        <p>${row.pesan}</p>
-      `;
+              <strong>${row.nama}</strong>
+              <p>${row.pesan}</p>
+            `;
           commentsList.appendChild(div);
         });
+
+        // Ini bagian tambahan:
+        currentPage = 1; // Reset ke page pertama
+        initPagination(); // Panggil ulang pagination setelah data baru dimasukkan
       }
 
       function loadComments() {
+        const oldScript = document.getElementById("loadCommentsScript");
+        if (oldScript) oldScript.remove();
+
         const script = document.createElement("script");
         script.src =
-          "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec?callback=handleData";
+          "https://script.google.com/macros/s/AKfycbwhd1-Qf4nXeu0t54DGVVpOHeImPxFxwJCNQkkhxn1AruW3Z1Xyj-EtZey4kk1_hEsS/exec";
         document.body.appendChild(script);
       }
 
       document.addEventListener("DOMContentLoaded", loadComments);
     </script>
-
-    <!-- Script comment -->
-
-    <!-- Load comment -->
-
     <!-- Load comment -->
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      let currentPage = 1;
+      const commentsPerPage = 10;
+
+      function initPagination() {
         const comments = document.querySelectorAll(".comment-item");
         const prevBtn = document.getElementById("prev-btn");
         const nextBtn = document.getElementById("next-btn");
-        const commentsPerPage = 10;
-        let currentPage = 1;
         const totalPages = Math.ceil(comments.length / commentsPerPage);
 
         function animateOut(element, callback) {
@@ -635,7 +543,7 @@
           setTimeout(() => {
             element.style.display = "none";
             if (callback) callback();
-          }, 400); // waktu harus sama dengan transition di atas
+          }, 400);
         }
 
         function animateIn(element) {
@@ -665,21 +573,20 @@
           nextBtn.disabled = page === totalPages;
         }
 
-        prevBtn.addEventListener("click", function () {
+        prevBtn.onclick = function () {
           if (currentPage > 1) {
             currentPage--;
             showPage(currentPage);
           }
-        });
+        };
 
-        nextBtn.addEventListener("click", function () {
+        nextBtn.onclick = function () {
           if (currentPage < totalPages) {
             currentPage++;
             showPage(currentPage);
           }
-        });
+        };
 
-        // Awal sembunyikan semua dulu
         comments.forEach((comment) => {
           comment.style.opacity = 0;
           comment.style.transform = "scale(0.95)";
@@ -687,7 +594,7 @@
         });
 
         showPage(currentPage);
-      });
+      }
     </script>
   </body>
 </html>
