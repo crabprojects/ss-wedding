@@ -357,6 +357,7 @@
                 <div class="comments-section">
                   <div class="comments-list">
                     <!-- contoh komentar dummy -->
+                    <div class="comment-item"></div>
                     <!-- <div class="comment-item">
                       <strong>Nama Tamu</strong>
                       <p>Selamat menempuh hidup baru!</p>
@@ -513,10 +514,9 @@
     <!-- Script comment -->
     <script>
       const form = document.getElementById("wishesForm");
-      const commentsList = document.querySelector(".comments-list");
 
       form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // cegah reload
+        e.preventDefault();
         const nama = document.getElementById("nama").value;
         const pesan = document.getElementById("pesan").value;
         const status = document.getElementById("status").value;
@@ -538,7 +538,7 @@
           const result = await res.json();
           if (result.result === "success") {
             form.reset();
-            loadComments(); // muat ulang komentar
+            loadComments();
           } else {
             alert("Gagal kirim data!");
           }
@@ -547,41 +547,39 @@
         }
       });
 
-      async function loadComments() {
-        try {
-          const res = await fetch(
-            "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec"
-          );
-          const data = await res.json();
+      function handleData(data) {
+        document.querySelector(".hadir span").textContent = data.hadir;
+        document.querySelector(".tidak-hadir span").textContent =
+          data.tidakHadir;
+        document.querySelector(
+          ".wishes-card-overlay > p"
+        ).textContent = `${data.comments.length} Comments`;
 
-          // Update jumlah hadir dan tidak hadir
-          document.querySelector(".hadir span").textContent = data.hadir;
-          document.querySelector(".tidak-hadir span").textContent =
-            data.tidakHadir;
-          document.querySelector(
-            ".wishes-card-overlay > p"
-          ).textContent = `${data.comments.length} Comments`;
+        const commentsList = document.querySelector(".comments-list");
+        commentsList.innerHTML = "";
 
-          // Kosongkan komentar sebelumnya
-          const commentsList = document.querySelector(".comments-list");
-          commentsList.innerHTML = "";
-
-          // Tampilkan komentar terbaru di atas
-          data.comments.reverse().forEach((row) => {
-            const div = document.createElement("div");
-            div.classList.add("comment-item");
-            div.innerHTML = `
-              <strong>${row.nama}</strong>
-              <p>${row.pesan}</p>
-            `;
-            commentsList.appendChild(div);
-          });
-        } catch (err) {
-          console.error("Gagal load komentar", err);
-        }
+        data.comments.reverse().forEach((row) => {
+          const div = document.createElement("div");
+          div.classList.add("comment-item");
+          div.innerHTML = `
+            <strong>${row.nama}</strong>
+            <p>${row.pesan}</p>
+          `;
+          commentsList.appendChild(div);
+        });
       }
 
-      // Panggil saat halaman selesai dimuat
+      function loadComments() {
+        const oldScript = document.getElementById("jsonpScript");
+        if (oldScript) oldScript.remove();
+
+        const script = document.createElement("script");
+        script.id = "jsonpScript";
+        script.src =
+          "https://script.google.com/macros/s/AKfycbwbUbWo89LDKz1dLzVkPC_YqCNau_uLXdERZAg7nHcaEbNCCNTjNd8dfKVRkMFgpqQ/exec?callback=handleData";
+        document.body.appendChild(script);
+      }
+
       window.addEventListener("DOMContentLoaded", loadComments);
     </script>
 
