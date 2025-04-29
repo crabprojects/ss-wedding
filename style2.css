@@ -528,10 +528,6 @@ body {
   box-shadow: 0 0 8px #4a4a5a, 0 0 15px #5c5c70;
 }
 
-/* .font-event {
-  font-family: "Mr De Haviland", cursive;
-} */
-
 .font-wrap {
   position: relative;
   display: inline-block;
@@ -563,12 +559,8 @@ body {
 }
 
 .wedding-gift {
-  /* position: relative; */
   background-image: url("img/home1.png");
   background-size: cover;
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* min-height: 100vh; */
   margin-top: -6rem;
   padding-top: 10rem;
   padding-bottom: 5rem;
@@ -603,7 +595,6 @@ body {
 
 .wedding-gift p {
   padding-top: 4rem;
-  /* font-weight: bold; */
   font-size: 1.333rem;
 }
 
@@ -623,7 +614,7 @@ body {
 
 .bank-logo {
   position: absolute;
-  top: 70px; /* jarak dari atas */
+  top: 64px; /* jarak dari atas */
   left: 40px; /* jarak dari kiri */
   width: 110px; /* ukuran logo */
   height: auto;
@@ -639,8 +630,9 @@ body {
   font-size: 1rem !important;
   font-weight: bold;
   letter-spacing: 0.2rem;
-  margin-top: -10px !important;
+  margin-top: -25px !important;
   margin-bottom: 15px;
+  margin-left: 10px;
   text-shadow: rgba(0, 0, 0, 0.85);
 }
 .norek {
@@ -650,6 +642,7 @@ body {
   font-weight: bold;
   letter-spacing: 0.4rem;
   margin-top: -40px;
+  margin-left: 10px;
 }
 .nama-rek {
   color: var(--textwhite);
@@ -658,6 +651,7 @@ body {
   letter-spacing: 0.2rem;
   white-space: nowrap;
   margin-top: -35px;
+  margin-left: 10px;
 }
 
 .copy-btn-wrapper {
