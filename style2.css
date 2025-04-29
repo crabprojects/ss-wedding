@@ -660,10 +660,8 @@ body {
 }
 
 .copy-btn-wrapper {
-  /* width: 100%; */
   text-align: right;
-  /* padding-right: 30px; */
-  margin-top: 65px;
+  margin-top: 20px;
 }
 
 .copy-btn-wrapper a {
