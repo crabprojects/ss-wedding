@@ -62,7 +62,7 @@
             <p>You Are Invited !</p>
             <!-- <div class="simply-countdown-cyber cyber mt-4"></div> -->
             <a href="#undangan" class="btn btn-lg mt-4 splash-button"
-              >Open Invitation</a
+              ><i class="bi bi-envelope-paper"></i> Open Invitation</a
             >
           </div>
         </main>
@@ -523,11 +523,24 @@
           <div class="row mt-5">
             <div class="col">
               <i class="bi bi-github"></i
-              ><a href="https://github.com/crabprojects" target="_blank"></a>
+              ><a
+                href="https://github.com/crabprojects"
+                target="_blank"
+                class="link-collab"
+              >
                 crabprojects</a
               >
             </div>
-            <div class="col"><i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/feed/" target="_blank"></a> syahar</div>
+            <div class="col">
+              <i class="bi bi-linkedin"></i
+              ><a
+                href="https://www.linkedin.com/feed/"
+                target="_blank"
+                class="link-collab"
+              >
+                syahar</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -561,7 +574,7 @@
           const audioIconWrapper = document.querySelector(
             ".audio-icon-wrapper"
           );
-          const audioIcon = document.querySelector(".audio-icon-wrapper, i");
+          const audioIcon = document.querySelector(".audio-icon-wrapper i");
           let isPlaying = false;
 
           // Tambahkan animasi ke card
@@ -826,6 +839,17 @@
           localStorage.setItem("opened", "true");
         };
       }
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("nama") || "";
+      // console.log(nama);
+
+      const namaContainer = document.querySelector(".isi-text h3");
+      namaContainer.innerText = nama;
+
+      document.querySelector("#nama").value = nama;
     </script>
   </body>
 </html>

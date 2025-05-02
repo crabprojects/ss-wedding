@@ -958,6 +958,14 @@ hr {
   /* z-index: 999999; */
 }
 
+.link-collab {
+  text-decoration: none !important;
+  color: var(--textwhite);
+  font-size: 1.3rem;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
 .audio-icon-wrapper {
   width: 4rem;
   height: 4rem;
