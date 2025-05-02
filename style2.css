@@ -926,7 +926,7 @@ hr {
 .footer-glass {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  /* z-index: 1; */
   display: flex;
   flex-direction: column !important; /* penting untuk dorong ke bawah */
   overflow: hidden;
@@ -955,6 +955,7 @@ hr {
   text-align: center;
   margin-top: auto; /* DORONG ke paling bawah */
   padding-bottom: 1rem; /* jarak dari tepi bawah */
+  /* z-index: 999999; */
 }
 
 .audio-icon-wrapper {
