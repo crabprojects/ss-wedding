@@ -896,6 +896,48 @@ footer {
   font-weight: bold;
 }
 
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: var(--textwhite);
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  z-index: 6;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[data-aos] {
+  transition-property: opacity, transform !important;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform !important;
+  backface-visibility: hidden;
+  /* transform: none !important; */
+}
+
+[data-aos^="fade"][data-aos][data-aos][data-aos] {
+  transform: translate(0, 1) !important;
+}
+
 /* === RESPONSIVE === */
 
 /* Laptop */
