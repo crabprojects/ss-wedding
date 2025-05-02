@@ -905,8 +905,10 @@ hr {
   /* overflow-x: hidden; */
   display: flex;
   position: relative;
-  min-height: 25vh; /* cocok untuk responsif */
+  min-height: 35vh; /* cocok untuk responsif */
   overflow: hidden;
+  /* border-top-right-radius: 50px;
+  border-top-left-radius: 50px; */
 }
 
 .footer-video {
