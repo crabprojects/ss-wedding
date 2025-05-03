@@ -457,7 +457,7 @@ body {
 
 /* styling */
 .event-card-wrapper {
-  background: url("img/border1-removebg-preview.png") center/contain no-repeat;
+  background: url("img/border3-removebg-preview.png") center/contain no-repeat;
   background-size: 100% 100%;
   padding: 10rem 2rem;
   max-width: 100% !important;
@@ -710,7 +710,7 @@ body {
 
 /* Wishes Card */
 .wishes-card {
-  background-image: url("img/home9.jpg"); /* Ganti dengan path gambar kamu */
+  background-image: url("img/home8.jpg"); /* Ganti dengan path gambar kamu */
   background-size: cover;
   background-position: center;
   /* padding: 30px 20px; */
