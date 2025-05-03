@@ -950,11 +950,12 @@ hr {
   position: relative;
   /* z-index: 1; */
   color: var(--textwhite);
+  text-shadow: var(--shadow);
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
   margin-top: auto; /* DORONG ke paling bawah */
-  padding-bottom: 1rem; /* jarak dari tepi bawah */
+  padding-bottom: 2rem; /* jarak dari tepi bawah */
   /* z-index: 999999; */
 }
 
